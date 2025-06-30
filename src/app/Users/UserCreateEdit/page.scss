@@ -1,0 +1,247 @@
+.user_create_edit_container {
+    padding: 24px;
+    min-height: 100vh;
+    background-color: #fafafa;
+    
+    // Clean card styling
+    .MuiCard-root {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.2s ease;
+        
+        &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    }
+    
+    // Simple form field styling
+    .MuiTextField-root {
+        .MuiOutlinedInput-root {
+            background-color: #ffffff;
+            border-radius: 8px;
+            transition: border-color 0.2s ease;
+            
+            &:hover {
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: #9ca3af;
+                }
+            }
+            
+            &.Mui-focused {
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: #2563eb;
+                    border-width: 2px;
+                }
+            }
+            
+            .MuiOutlinedInput-notchedOutline {
+                border-color: #d1d5db;
+                transition: border-color 0.2s ease;
+            }
+        }
+        
+        .MuiFormHelperText-root {
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+    }
+    
+    // Clean button styling
+    .MuiButton-root {
+        border-radius: 6px;
+        font-weight: 500;
+        text-transform: none;
+        transition: all 0.2s ease;
+        
+        &.MuiButton-contained {
+            background-color: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            
+            &:hover {
+                background-color: #1d4ed8;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            }
+            
+            &:disabled {
+                background-color: #9ca3af;
+                color: #ffffff;
+            }
+        }
+        
+        &.MuiButton-outlined {
+            border: 1px solid #d1d5db;
+            color: #374151;
+            background-color: #ffffff;
+            
+            &:hover {
+                border-color: #9ca3af;
+                background-color: #f9fafb;
+            }
+        }
+        
+        &.MuiButton-text {
+            color: #6b7280;
+            
+            &:hover {
+                background-color: #f3f4f6;
+            }
+        }
+    }
+    
+    // Simple chip styling
+    .MuiChip-root {
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 0.75rem;
+        transition: all 0.2s ease;
+        
+        &.MuiChip-outlined {
+            border: 1px solid #d1d5db;
+            color: #374151;
+            background-color: #ffffff;
+            
+            &:hover {
+                border-color: #9ca3af;
+                background-color: #f9fafb;
+            }
+        }
+    }
+    
+    // Simple switch styling
+    .MuiSwitch-root {
+        .MuiSwitch-switchBase {
+            &.Mui-checked {
+                color: #2563eb;
+                
+                + .MuiSwitch-track {
+                    background-color: #2563eb;
+                    opacity: 0.5;
+                }
+            }
+        }
+        
+        .MuiSwitch-track {
+            background-color: #d1d5db;
+            opacity: 1;
+        }
+    }
+    
+    // Simple checkbox styling
+    .MuiCheckbox-root {
+        color: #9ca3af;
+        
+        &.Mui-checked {
+            color: #2563eb;
+        }
+        
+        &:hover {
+            background-color: #f3f4f6;
+        }
+    }
+    
+    // Clean form control styling
+    .MuiFormControlLabel-root {
+        margin: 0;
+        
+        &:hover {
+            background-color: #f9fafb;
+        }
+        
+        .MuiFormControlLabel-label {
+            font-size: 0.875rem;
+        }
+    }
+    
+    // Simple divider styling
+    .MuiDivider-root {
+        border-color: #e5e7eb;
+    }
+    
+    // Typography styling
+    .MuiTypography-h4 {
+        font-weight: 600;
+        color: #1f2937;
+    }
+    
+    .MuiTypography-h6 {
+        font-weight: 600;
+        color: #374151;
+        font-size: 1rem;
+    }
+    
+    .MuiTypography-body1 {
+        color: #6b7280;
+        font-size: 0.875rem;
+    }
+    
+    .MuiTypography-body2 {
+        color: #9ca3af;
+        font-size: 0.75rem;
+    }
+    
+    // Icon styling
+    .MuiSvgIcon-root {
+        font-size: 1.2rem;
+    }
+    
+    // Background boxes
+    .MuiBox-root {
+        &[style*="background-color: rgb(249, 250, 251)"] {
+            background-color: #f9fafb !important;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+        }
+    }
+    
+    // Responsive design
+    @media (max-width: 768px) {
+        padding: 16px;
+        
+        .MuiCard-root {
+            margin: 0 -8px;
+        }
+        
+        .MuiCardContent-root {
+            padding: 24px 16px !important;
+        }
+        
+        .MuiButton-root {
+            font-size: 0.875rem;
+        }
+        
+        .MuiTypography-h4 {
+            font-size: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        padding: 12px;
+        
+        .MuiCard-root {
+            border-radius: 6px;
+        }
+        
+        .MuiCardContent-root {
+            padding: 20px 12px !important;
+        }
+        
+        .MuiTextField-root {
+            .MuiOutlinedInput-root {
+                font-size: 0.875rem;
+            }
+        }
+        
+        .MuiButton-root {
+            font-size: 0.8rem;
+            padding: 8px 16px;
+        }
+        
+        .MuiChip-root {
+            font-size: 0.7rem;
+            height: 24px;
+        }
+    }
+}

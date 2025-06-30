@@ -1,0 +1,163 @@
+.login_page_container {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    min-height: 760px;
+    height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+
+    .login_page_image_container {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        background: linear-gradient(135deg, #0ccc15, #01a6b8); 
+        border-radius: 30px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .login_page_image_title {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .login_page_image_subtitle {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login_page_image_description {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .login_page_image {
+            width: 90%;
+            max-width: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .login_form_container {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-auto-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+        padding: 40px 50px;
+        margin: auto;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+        .login_form_logo {
+            width: 100px;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .login_form_title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #333;
+        }
+
+        .login_form_subtitle {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .form_container {
+            width: 100%;
+
+            .input_labels {
+                align-self: flex-start;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+                margin-top: 1.2rem;
+                color: #555;
+            }
+
+            .forgot_password {
+                text-align: right;
+                margin-top: 0.8rem;
+                margin-bottom: 0.5rem;
+                
+                a {
+                    color: #01a6b8;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                    transition: color 0.2s ease;
+                    
+                    &:hover {
+                        color: #0ccc15;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Media query for responsive design on mobile devices */
+@media screen and (max-width: 768px) {
+    .login_page_container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        
+        .login_page_image_container {
+            display: none;
+        }
+        
+        .login_form_container {
+            padding: 30px;
+            max-width: 100%;
+        }
+    }
+}

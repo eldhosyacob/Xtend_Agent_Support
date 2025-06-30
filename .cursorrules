@@ -1,0 +1,36 @@
+[MongoDB]
+- Use native MongoDB driver only
+- db_conn.js is located at src/pages/api/db_conn.js
+- Do not use Mongoose
+- Use $inc for stock increments: { $inc: { stock: amountToAdd } }
+- Use bulkWrite() for multiple updates instead of multiple updateOne()
+- Use insertMany() for multiple inserts instead of individual insertOne() calls
+
+[Routing]
+- Use Next.js Pages Router (src/pages/api), not App Router
+- Do not include /api in authAxios URLs; it is already in process.env.NEXT_PUBLIC_API_URL just concatinate this env variable at the beginning of every api url
+
+[authAxios]
+- No try-catch blocks with authAxios - use direct await
+- Use: const res = await authAxios(...); if (res) return;
+- authAxios already exists in src/hooks/useAuthAxios.js - do not recreate
+
+[Frontend Error Handling]
+- No try-catch blocks in frontend code, authAxios already handles response errors in a try catch before returning the data
+
+[MUI]
+- Use new Grid syntax: <Grid size={{ xs: 12, md: 6 }}>
+- Avoid using xs/md props like xs={12}
+
+[S3 File Organization]
+- Organize files in folders by entity ID: HappyPaw/{EntityType}/{entityId}/{filename}
+- Examples: HappyPaw/PurchaseBills/{purchaseOrderId}/{filename}, HappyPaw/Products/{productId}/{filename}
+- Create entity first to get ID, then upload files with proper folder structure
+- Stream files directly to S3 using `Body: file` (file is already a stream) - do not buffer in memory
+- Use single uploadPromise variable, not arrays of promises for memory efficiency
+
+[Error Handling]
+- Only use try-catch at critical failure points: S3 uploads and database operations
+- Do not wrap entire function handlers in try-catch
+- Handle S3 upload errors with .catch() on Upload promises
+- Handle database operation failures with try-catch around DB calls only
