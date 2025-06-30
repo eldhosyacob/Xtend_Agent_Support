@@ -55,10 +55,10 @@ const AnimatedBackground = () => {
         overflow: 'hidden',
         zIndex: 0,
         background: `
-          radial-gradient(circle at 20% 20%, #2F3E46 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, #52796F 0%, transparent 50%),
-          radial-gradient(circle at 40% 70%, #2F3E46 0%, transparent 50%),
-          linear-gradient(135deg, #FAF3E0 0%, #FFD6A5 25%, #52796F 50%, #2F3E46 100%)
+          radial-gradient(circle at 20% 20%, #1B365D 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, #C8102E 0%, transparent 50%),
+          radial-gradient(circle at 40% 70%, #1B365D 0%, transparent 50%),
+          linear-gradient(135deg, #F5F7FA 0%, #EAEAEA 25%, #1B365D 50%, #1B365D 100%)
         `,
         '&::before': {
           content: '""',
@@ -68,8 +68,8 @@ const AnimatedBackground = () => {
           right: 0,
           bottom: 0,
           background: `
-            radial-gradient(circle at 60% 30%, rgba(255, 214, 165, 0.3) 0%, transparent 50%),
-            radial-gradient(circle at 30% 80%, rgba(82, 121, 111, 0.2) 0%, transparent 50%)
+            radial-gradient(circle at 60% 30%, rgba(200, 16, 46, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 30% 80%, rgba(27, 54, 93, 0.2) 0%, transparent 50%)
           `,
           animation: 'float 6s ease-in-out infinite',
         },
@@ -81,8 +81,8 @@ const AnimatedBackground = () => {
           right: 0,
           bottom: 0,
           background: `
-            radial-gradient(circle at 80% 20%, rgba(47, 62, 70, 0.2) 0%, transparent 50%),
-            radial-gradient(circle at 20% 60%, rgba(255, 214, 165, 0.15) 0%, transparent 50%)
+            radial-gradient(circle at 80% 20%, rgba(27, 54, 93, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 20% 60%, rgba(200, 16, 46, 0.1) 0%, transparent 50%)
           `,
           animation: 'float 8s ease-in-out infinite reverse',
         },
@@ -141,7 +141,7 @@ const FloatingParticles = () => {
             position: 'absolute',
             width: `${particle.size}px`,
             height: `${particle.size}px`,
-            backgroundColor: 'rgba(255, 214, 165, 0.4)',
+            backgroundColor: 'rgba(200, 16, 46, 0.3)',
             borderRadius: '50%',
             left: `${particle.left}%`,
             animation: `floatUp ${particle.animationDuration}s linear infinite`,
@@ -197,12 +197,12 @@ export default function Login() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
-                  background: 'rgba(250, 243, 224, 0.25)',
+                  background: 'rgba(255, 255, 255, 0.95)',
                   backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  border: '1px solid rgba(255, 255, 255, 0.8)',
                   borderRadius: { xs: 3, md: '24px 0 0 24px' },
                   overflow: 'hidden',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+                  boxShadow: '0 8px 32px rgba(27, 54, 93, 0.15)',
                   position: 'relative',
                   '&::before': {
                     content: '""',
@@ -210,8 +210,8 @@ export default function Login() {
                     top: 0,
                     left: 0,
                     right: 0,
-                    height: '2px',
-                    background: 'linear-gradient(90deg, #FFD6A5, #52796F, #2F3E46)',
+                    height: '3px',
+                    background: 'linear-gradient(90deg, #C8102E, #1B365D, #C8102E)',
                   }
                 }}
               >
@@ -229,7 +229,7 @@ export default function Login() {
                 elevation={0}
                 sx={{
                   height: '100%',
-                  background: 'rgba(47, 62, 70, 0.85)',
+                  background: 'rgba(27, 54, 93, 0.95)',
                   backdropFilter: 'blur(20px)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   borderRadius: { xs: 3, md: '0 24px 24px 0' },
@@ -237,10 +237,10 @@ export default function Login() {
                   flexDirection: 'column',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  color: '#FAF3E0',
+                  color: '#FFFFFF',
                   position: 'relative',
                   overflow: 'hidden',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
                   '&::before': {
                     content: '""',
                     position: 'absolute',
@@ -249,8 +249,8 @@ export default function Login() {
                     right: 0,
                     bottom: 0,
                     background: `
-                      radial-gradient(circle at 30% 30%, rgba(255, 214, 165, 0.1) 0%, transparent 60%),
-                      radial-gradient(circle at 70% 70%, rgba(82, 121, 111, 0.15) 0%, transparent 60%)
+                      radial-gradient(circle at 30% 30%, rgba(200, 16, 46, 0.1) 0%, transparent 60%),
+                      radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 60%)
                     `,
                     animation: 'pulse 4s ease-in-out infinite',
                   },
@@ -262,16 +262,17 @@ export default function Login() {
               >
                 <Box sx={{ textAlign: 'center', zIndex: 1, p: 4 }}>
                   <Box sx={{ position: 'relative', mb: 3 }}>
-                    <Image
-                      src="/images/intenso.png"
+                    <img src="/images/xtendl.png" alt="IntensoCore ERP Logo" height={150} />
+                    {/* <Image
+                      src="/images/xtendlogo.png"
                       alt="IntensoCore ERP Logo"
-                      width={150}
+                      width={300}
                       height={150}
                       style={{
-                        filter: 'drop-shadow(0 8px 16px rgba(255, 214, 165, 0.3))',
+                        filter: 'drop-shadow(0 8px 16px rgba(200, 16, 46, 0.3))',
                         animation: 'glow 2s ease-in-out infinite alternate'
                       }}
-                    />
+                    /> */}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -281,7 +282,7 @@ export default function Login() {
                         width: 120,
                         height: 120,
                         borderRadius: '50%',
-                        background: 'radial-gradient(circle, rgba(255, 214, 165, 0.2) 0%, transparent 70%)',
+                        background: 'radial-gradient(circle, rgba(200, 16, 46, 0.2) 0%, transparent 70%)',
                         animation: 'expand 3s ease-in-out infinite',
                         zIndex: -1,
                       }}
@@ -292,27 +293,27 @@ export default function Login() {
                     fontWeight: 700, 
                     mb: 2,
                     fontSize: { xs: '2.2rem', md: '3.5rem' },
-                    background: 'linear-gradient(135deg, #FAF3E0 0%, #FFD6A5 100%)',
+                    background: 'linear-gradient(135deg, #FFFFFF 0%, #F5F7FA 100%)',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
-                    textShadow: '0 2px 10px rgba(255, 214, 165, 0.3)',
+                    textShadow: '0 2px 10px rgba(255, 255, 255, 0.3)',
                     '@keyframes glow': {
-                      '0%': { filter: 'drop-shadow(0 8px 16px rgba(255, 214, 165, 0.3))' },
-                      '100%': { filter: 'drop-shadow(0 12px 24px rgba(255, 214, 165, 0.5))' }
+                      '0%': { filter: 'drop-shadow(0 8px 16px rgba(200, 16, 46, 0.3))' },
+                      '100%': { filter: 'drop-shadow(0 12px 24px rgba(200, 16, 46, 0.5))' }
                     },
                     '@keyframes expand': {
                       '0%, 100%': { transform: 'translate(-50%, -50%) scale(1)', opacity: 0.3 },
                       '50%': { transform: 'translate(-50%, -50%) scale(1.2)', opacity: 0.1 }
                     }
                   }}>
-                    IntensoCore ERP
+                    Agent Support System
                   </Typography>
                   
                   <Typography variant="h5" sx={{ 
                     fontWeight: 400, 
                     mb: 2, 
-                    color: '#FAF3E0',
+                    color: '#FFFFFF',
                     opacity: 0.95,
                     fontSize: { xs: '1.2rem', md: '1.6rem' }
                   }}>
@@ -322,15 +323,15 @@ export default function Login() {
                   <Chip
                     label="Professional Edition"
                     sx={{
-                      background: 'rgba(255, 214, 165, 0.2)',
-                      color: '#FFD6A5',
-                      border: '1px solid rgba(255, 214, 165, 0.4)',
+                      background: 'rgba(200, 16, 46, 0.2)',
+                      color: '#FFFFFF',
+                      border: '1px solid rgba(200, 16, 46, 0.4)',
                       fontWeight: 600,
                       mb: 4
                     }}
                   />
 
-                  <Divider sx={{ my: 4, borderColor: 'rgba(255, 214, 165, 0.3)' }} />
+                  <Divider sx={{ my: 4, borderColor: 'rgba(255, 255, 255, 0.2)' }} />
 
                   {/* Feature Cards */}
                   <Grid container spacing={3} sx={{ mt: 2 }}>
@@ -345,22 +346,22 @@ export default function Login() {
                           justifyContent: 'center',
                           alignItems: 'center',
                           borderRadius: 2,
-                          background: 'rgba(255, 214, 165, 0.1)',
+                          background: 'rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
-                          border: '1px solid rgba(255, 214, 165, 0.2)',
+                          border: '1px solid rgba(255, 255, 255, 0.2)',
                           transition: 'all 0.3s ease',
                           '&:hover': {
                             transform: 'translateY(-5px)',
-                            background: 'rgba(255, 214, 165, 0.15)',
-                            boxShadow: '0 8px 25px rgba(255, 214, 165, 0.2)'
+                            background: 'rgba(200, 16, 46, 0.15)',
+                            boxShadow: '0 8px 25px rgba(200, 16, 46, 0.2)'
                           }
                         }}
                       >
-                        <Dashboard sx={{ fontSize: 40, mb: 2, color: '#FFD6A5' }} />
-                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FAF3E0', fontSize: '1.1rem' }}>
+                        <Dashboard sx={{ fontSize: 40, mb: 2, color: '#F5F5F5' }} />
+                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FFFFFF', fontSize: '1.1rem' }}>
                           Dashboard
                         </Typography>
-                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FAF3E0', fontSize: '0.9rem', textAlign: 'center' }}>
+                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FFFFFF', fontSize: '0.9rem', textAlign: 'center' }}>
                           Real-time insights
                         </Typography>
                       </Box>
@@ -377,22 +378,22 @@ export default function Login() {
                           justifyContent: 'center',
                           alignItems: 'center',
                           borderRadius: 2,
-                          background: 'rgba(255, 214, 165, 0.1)',
+                          background: 'rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
-                          border: '1px solid rgba(255, 214, 165, 0.2)',
+                          border: '1px solid rgba(255, 255, 255, 0.2)',
                           transition: 'all 0.3s ease',
                           '&:hover': {
                             transform: 'translateY(-5px)',
-                            background: 'rgba(255, 214, 165, 0.15)',
-                            boxShadow: '0 8px 25px rgba(255, 214, 165, 0.2)'
+                            background: 'rgba(200, 16, 46, 0.15)',
+                            boxShadow: '0 8px 25px rgba(200, 16, 46, 0.2)'
                           }
                         }}
                       >
-                        <Inventory sx={{ fontSize: 40, mb: 2, color: '#FFD6A5' }} />
-                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FAF3E0', fontSize: '1.1rem' }}>
+                        <Inventory sx={{ fontSize: 40, mb: 2, color: '#F5F5F5' }} />
+                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FFFFFF', fontSize: '1.1rem' }}>
                           Inventory
                         </Typography>
-                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FAF3E0', fontSize: '0.9rem', textAlign: 'center' }}>
+                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FFFFFF', fontSize: '0.9rem', textAlign: 'center' }}>
                           Stock management
                         </Typography>
                       </Box>
@@ -409,22 +410,22 @@ export default function Login() {
                           justifyContent: 'center',
                           alignItems: 'center',
                           borderRadius: 2,
-                          background: 'rgba(255, 214, 165, 0.1)',
+                          background: 'rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
-                          border: '1px solid rgba(255, 214, 165, 0.2)',
+                          border: '1px solid rgba(255, 255, 255, 0.2)',
                           transition: 'all 0.3s ease',
                           '&:hover': {
                             transform: 'translateY(-5px)',
-                            background: 'rgba(255, 214, 165, 0.15)',
-                            boxShadow: '0 8px 25px rgba(255, 214, 165, 0.2)'
+                            background: 'rgba(200, 16, 46, 0.15)',
+                            boxShadow: '0 8px 25px rgba(200, 16, 46, 0.2)'
                           }
                         }}
                       >
-                        <Analytics sx={{ fontSize: 40, mb: 2, color: '#FFD6A5' }} />
-                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FAF3E0', fontSize: '1.1rem' }}>
+                        <Analytics sx={{ fontSize: 40, mb: 2, color: '#F5F5F5' }} />
+                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FFFFFF', fontSize: '1.1rem' }}>
                           Analytics
                         </Typography>
-                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FAF3E0', fontSize: '0.9rem', textAlign: 'center' }}>
+                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FFFFFF', fontSize: '0.9rem', textAlign: 'center' }}>
                           Business intelligence
                         </Typography>
                       </Box>
@@ -441,22 +442,22 @@ export default function Login() {
                           justifyContent: 'center',
                           alignItems: 'center',
                           borderRadius: 2,
-                          background: 'rgba(255, 214, 165, 0.1)',
+                          background: 'rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
-                          border: '1px solid rgba(255, 214, 165, 0.2)',
+                          border: '1px solid rgba(255, 255, 255, 0.2)',
                           transition: 'all 0.3s ease',
                           '&:hover': {
                             transform: 'translateY(-5px)',
-                            background: 'rgba(255, 214, 165, 0.15)',
-                            boxShadow: '0 8px 25px rgba(255, 214, 165, 0.2)'
+                            background: 'rgba(200, 16, 46, 0.15)',
+                            boxShadow: '0 8px 25px rgba(200, 16, 46, 0.2)'
                           }
                         }}
                       >
-                        <Security sx={{ fontSize: 40, mb: 2, color: '#FFD6A5' }} />
-                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FAF3E0', fontSize: '1.1rem' }}>
+                        <Security sx={{ fontSize: 40, mb: 2, color: '#F5F5F5' }} />
+                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: '#FFFFFF', fontSize: '1.1rem' }}>
                           Security
                         </Typography>
-                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FAF3E0', fontSize: '0.9rem', textAlign: 'center' }}>
+                        <Typography variant="body2" sx={{ opacity: 0.8, color: '#FFFFFF', fontSize: '0.9rem', textAlign: 'center' }}>
                           Enterprise-grade
                         </Typography>
                       </Box>
@@ -524,16 +525,17 @@ const LoginForm = () => {
       {/* Header */}
       <Box sx={{ textAlign: 'center', mb: 4 }}>
         <Box sx={{ position: 'relative', mb: 3 }}>
-          <Image
-            src="/images/intensocore.png"
+          <img src="/images/xtend.png" alt="IntensoCore ERP Logo" height={150} />
+          {/* <Image
+            src="/images/xtend.png"
             alt="IntensoCore ERP Logo"
             width={150}
             height={150}
             style={{
-              filter: 'drop-shadow(0 4px 12px rgba(47, 62, 70, 0.3))',
+              filter: 'drop-shadow(0 4px 12px rgba(27, 54, 93, 0.3))',
               animation: 'logoFloat 3s ease-in-out infinite'
             }}
-          />
+          /> */}
           <Box
             sx={{
               position: 'absolute',
@@ -543,7 +545,7 @@ const LoginForm = () => {
               width: 90,
               height: 90,
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(255, 214, 165, 0.3) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(200, 16, 46, 0.15) 0%, transparent 70%)',
               animation: 'logoGlow 2s ease-in-out infinite alternate',
               zIndex: -1,
               '@keyframes logoFloat': {
@@ -562,10 +564,10 @@ const LoginForm = () => {
           variant="h3" 
           sx={{ 
             fontWeight: 700, 
-            color: '#2F3E46',
+            color: '#1B365D',
             mb: 1,
             fontSize: { xs: '2rem', md: '2.5rem' },
-            textShadow: '0 2px 4px rgba(47, 62, 70, 0.1)'
+            textShadow: '0 2px 4px rgba(27, 54, 93, 0.1)'
           }}
         >
           Welcome Back
@@ -573,12 +575,13 @@ const LoginForm = () => {
         <Typography 
           variant="body1" 
           sx={{ 
-            color: '#2F3E46',
+            color: '#1B365D',
             fontSize: '1.1rem',
-            fontWeight: 600
+            fontWeight: 500,
+            opacity: 0.8
           }}
         >
-          Access your ERP dashboard
+          Manage your agents and customers
         </Typography>
       </Box>
 
@@ -586,11 +589,11 @@ const LoginForm = () => {
       <Card 
         elevation={0}
         sx={{ 
-          background: 'rgba(250, 243, 224, 0.6)',
+          background: 'rgba(245, 247, 250, 0.8)',
           backdropFilter: 'blur(15px)',
           borderRadius: 4,
-          border: '1px solid rgba(255, 214, 165, 0.3)',
-          boxShadow: '0 8px 32px rgba(47, 62, 70, 0.1)',
+          border: '1px solid rgba(27, 54, 93, 0.1)',
+          boxShadow: '0 8px 32px rgba(27, 54, 93, 0.1)',
           overflow: 'hidden',
           position: 'relative',
           '&::before': {
@@ -599,8 +602,8 @@ const LoginForm = () => {
             top: 0,
             left: 0,
             right: 0,
-            height: '1px',
-            background: 'linear-gradient(90deg, transparent, #FFD6A5, transparent)',
+            height: '2px',
+            background: 'linear-gradient(90deg, transparent, #C8102E, transparent)',
           }
         }}
       >
@@ -608,15 +611,15 @@ const LoginForm = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <Box sx={{ mb: 3 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <Email sx={{ fontSize: 20, color: '#52796F', mr: 1 }} />
+                <Email sx={{ fontSize: 20, color: '#C8102E', mr: 1 }} />
                 <Typography 
                   variant="body2" 
                   sx={{ 
                     fontWeight: 600, 
-                    color: '#2F3E46'
+                    color: '#1B365D'
                   }}
                 >
-                  Email Address
+                  Username
                 </Typography>
               </Box>
               <TextField
@@ -628,30 +631,28 @@ const LoginForm = () => {
                 helperText={errors.email ? "Email is required" : ""}
                 sx={{
                   '& .MuiOutlinedInput-root': {
-                    background: 'rgba(255, 255, 255, 0.7)',
-                    backdropFilter: 'blur(10px)',
+                    background: '#FFFFFF',
                     borderRadius: 3,
-                    border: '1px solid rgba(82, 121, 111, 0.2)',
+                    border: '1px solid #EAEAEA',
                     '&:hover': {
-                      border: '1px solid rgba(82, 121, 111, 0.4)',
-                      background: 'rgba(255, 255, 255, 0.8)',
+                      border: '1px solid #C8102E',
+                      boxShadow: '0 0 0 1px rgba(200, 16, 46, 0.1)',
                     },
                     '&.Mui-focused': {
-                      border: '1px solid #52796F',
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      boxShadow: '0 0 0 3px rgba(82, 121, 111, 0.1)',
+                      border: '1px solid #C8102E',
+                      boxShadow: '0 0 0 3px rgba(200, 16, 46, 0.1)',
                     },
                     '& fieldset': {
                       border: 'none',
                     },
                   },
                   '& input': {
-                    color: '#2F3E46',
+                    color: '#1B365D',
                     fontWeight: 500,
                   },
                   '& input::placeholder': {
-                    color: '#52796F',
-                    opacity: 0.7,
+                    color: '#1B365D',
+                    opacity: 0.6,
                   }
                 }}
               />
@@ -659,12 +660,12 @@ const LoginForm = () => {
 
             <Box sx={{ mb: 4 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <Lock sx={{ fontSize: 20, color: '#52796F', mr: 1 }} />
+                <Lock sx={{ fontSize: 20, color: '#C8102E', mr: 1 }} />
                 <Typography 
                   variant="body2" 
                   sx={{ 
                     fontWeight: 600, 
-                    color: '#2F3E46'
+                    color: '#1B365D'
                   }}
                 >
                   Password
@@ -679,30 +680,28 @@ const LoginForm = () => {
                 helperText={errors.password ? "Password is required" : ""}
                 sx={{
                   '& .MuiOutlinedInput-root': {
-                    background: 'rgba(255, 255, 255, 0.7)',
-                    backdropFilter: 'blur(10px)',
+                    background: '#FFFFFF',
                     borderRadius: 3,
-                    border: '1px solid rgba(82, 121, 111, 0.2)',
+                    border: '1px solid #EAEAEA',
                     '&:hover': {
-                      border: '1px solid rgba(82, 121, 111, 0.4)',
-                      background: 'rgba(255, 255, 255, 0.8)',
+                      border: '1px solid #C8102E',
+                      boxShadow: '0 0 0 1px rgba(200, 16, 46, 0.1)',
                     },
                     '&.Mui-focused': {
-                      border: '1px solid #52796F',
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      boxShadow: '0 0 0 3px rgba(82, 121, 111, 0.1)',
+                      border: '1px solid #C8102E',
+                      boxShadow: '0 0 0 3px rgba(200, 16, 46, 0.1)',
                     },
                     '& fieldset': {
                       border: 'none',
                     },
                   },
                   '& input': {
-                    color: '#2F3E46',
+                    color: '#1B365D',
                     fontWeight: 500,
                   },
                   '& input::placeholder': {
-                    color: '#52796F',
-                    opacity: 0.7,
+                    color: '#1B365D',
+                    opacity: 0.6,
                   }
                 }}
                 InputProps={{
@@ -714,9 +713,9 @@ const LoginForm = () => {
                         onMouseDown={handleMouseDownPassword}
                         edge="end"
                         sx={{ 
-                          color: '#52796F',
+                          color: '#C8102E',
                           '&:hover': {
-                            backgroundColor: 'rgba(82, 121, 111, 0.1)',
+                            backgroundColor: 'rgba(200, 16, 46, 0.1)',
                           }
                         }}
                       >
@@ -732,7 +731,7 @@ const LoginForm = () => {
               <Link 
                 href="/ForgotPassword" 
                 style={{ 
-                  color: '#52796F', 
+                  color: '#C8102E', 
                   textDecoration: 'none',
                   fontSize: '0.95rem',
                   fontWeight: 600,
@@ -754,10 +753,9 @@ const LoginForm = () => {
                 fontSize: '1.1rem',
                 fontWeight: 700,
                 textTransform: 'none',
-                background: 'linear-gradient(135deg, #FFD6A5 0%, #52796F 100%)',
-                border: '1px solid rgba(255, 214, 165, 0.3)',
-                color: '#2F3E46',
-                boxShadow: '0 8px 25px rgba(255, 214, 165, 0.4)',
+                background: 'linear-gradient(135deg, #C8102E 0%, #1B365D 100%)',
+                color: '#FFFFFF',
+                boxShadow: '0 8px 25px rgba(200, 16, 46, 0.3)',
                 position: 'relative',
                 overflow: 'hidden',
                 '&::before': {
@@ -767,18 +765,17 @@ const LoginForm = () => {
                   left: '-100%',
                   width: '100%',
                   height: '100%',
-                  background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)',
+                  background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)',
                   animation: 'shimmer 2s infinite',
                 },
                 '&:hover': {
-                  background: 'linear-gradient(135deg, #FFD6A5 0%, #2F3E46 100%)',
-                  color: '#FAF3E0',
-                  boxShadow: '0 12px 35px rgba(255, 214, 165, 0.5)',
+                  background: 'linear-gradient(135deg, #1B365D 0%, #C8102E 100%)',
+                  boxShadow: '0 12px 35px rgba(200, 16, 46, 0.4)',
                   transform: 'translateY(-2px)',
                 },
                 '&:disabled': {
-                  background: 'rgba(82, 121, 111, 0.3)',
-                  color: 'rgba(47, 62, 70, 0.5)',
+                  background: 'rgba(27, 54, 93, 0.3)',
+                  color: 'rgba(255, 255, 255, 0.7)',
                   boxShadow: 'none',
                 },
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',

@@ -62,11 +62,11 @@ const openedMixin = (theme) => ({
     duration: theme.transitions.duration.enteringScreen,
   }),
   overflowX: 'hidden',
-  background: 'linear-gradient(180deg, rgba(47, 62, 70, 0.98) 0%, rgba(47, 62, 70, 0.95) 50%, rgba(82, 121, 111, 0.92) 100%)',
+  background: 'linear-gradient(180deg, rgba(27, 54, 93, 0.98) 0%, rgba(27, 54, 93, 0.95) 50%, rgba(1, 166, 184, 0.92) 100%)',
   backdropFilter: 'blur(25px)',
   border: 'none',
-  borderRight: '1px solid rgba(255, 214, 165, 0.15)',
-  boxShadow: '8px 0 32px rgba(47, 62, 70, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.02)',
+  borderRight: '1px solid rgba(1, 166, 184, 0.15)',
+  boxShadow: '8px 0 32px rgba(27, 54, 93, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.02)',
   height: '100vh',
   position: 'fixed',
   '&::before': {
@@ -76,7 +76,7 @@ const openedMixin = (theme) => ({
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'linear-gradient(180deg, rgba(255, 214, 165, 0.02) 0%, rgba(82, 121, 111, 0.05) 100%)',
+    background: 'linear-gradient(180deg, rgba(1, 166, 184, 0.02) 0%, rgba(12, 204, 21, 0.05) 100%)',
     pointerEvents: 'none',
   }
 });
@@ -88,10 +88,10 @@ const closedMixin = (theme) => ({
   }),
   overflowX: 'hidden',
   width: 0,
-  background: 'linear-gradient(180deg, rgba(47, 62, 70, 0.98) 0%, rgba(47, 62, 70, 0.95) 50%, rgba(82, 121, 111, 0.92) 100%)',
+  background: 'linear-gradient(180deg, rgba(27, 54, 93, 0.98) 0%, rgba(27, 54, 93, 0.95) 50%, rgba(1, 166, 184, 0.92) 100%)',
   backdropFilter: 'blur(25px)',
   border: 'none',
-  borderRight: '1px solid rgba(255, 214, 165, 0.15)',
+  borderRight: '1px solid rgba(1, 166, 184, 0.15)',
   height: '100vh',
   position: 'fixed',
 });
@@ -129,10 +129,10 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
-  background: 'linear-gradient(135deg, rgba(47, 62, 70, 0.98) 0%, rgba(82, 121, 111, 0.95) 100%)',
+  background: 'linear-gradient(135deg, rgba(27, 54, 93, 0.98) 0%, rgba(1, 166, 184, 0.95) 100%)',
   backdropFilter: 'blur(30px)',
-  borderBottom: '1px solid rgba(255, 214, 165, 0.15)',
-  boxShadow: '0 8px 32px rgba(47, 62, 70, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+  borderBottom: '1px solid rgba(1, 166, 184, 0.15)',
+  boxShadow: '0 8px 32px rgba(27, 54, 93, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05)',
   transition: theme.transitions.create(['width', 'margin'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -156,7 +156,7 @@ const AppBar = styled(MuiAppBar, {
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'linear-gradient(135deg, rgba(255, 214, 165, 0.03) 0%, rgba(82, 121, 111, 0.08) 100%)',
+    background: 'linear-gradient(135deg, rgba(1, 166, 184, 0.03) 0%, rgba(12, 204, 21, 0.08) 100%)',
     pointerEvents: 'none',
   }
 }));
@@ -181,7 +181,7 @@ const SearchBar = styled('div')(({ theme }) => ({
   borderRadius: 16,
   background: 'rgba(255, 255, 255, 0.08)',
   backdropFilter: 'blur(20px)',
-  border: '1px solid rgba(255, 214, 165, 0.2)',
+  border: '1px solid rgba(1, 166, 184, 0.2)',
   width: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -189,14 +189,14 @@ const SearchBar = styled('div')(({ theme }) => ({
   overflow: 'hidden',
   '&:hover': {
     background: 'rgba(255, 255, 255, 0.12)',
-    border: '1px solid rgba(255, 214, 165, 0.4)',
+    border: '1px solid rgba(1, 166, 184, 0.4)',
     transform: 'translateY(-1px)',
-    boxShadow: '0 8px 25px rgba(255, 214, 165, 0.15)',
+    boxShadow: '0 8px 25px rgba(1, 166, 184, 0.15)',
   },
   '&:focus-within': {
     background: 'rgba(255, 255, 255, 0.15)',
-    border: '1px solid #FFD6A5',
-    boxShadow: '0 0 0 3px rgba(255, 214, 165, 0.2), 0 8px 25px rgba(255, 214, 165, 0.25)',
+    border: '1px solid #01A6B8',
+    boxShadow: '0 0 0 3px rgba(1, 166, 184, 0.2), 0 8px 25px rgba(1, 166, 184, 0.25)',
     transform: 'translateY(-2px)',
   },
 }));
@@ -209,12 +209,12 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  color: 'rgba(255, 214, 165, 0.8)',
+  color: 'rgba(1, 166, 184, 0.8)',
   zIndex: 1,
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: '#FAF3E0',
+  color: '#FFFFFF',
   width: '100%',
   fontWeight: 500,
   '& .MuiInputBase-input': {
@@ -225,7 +225,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     fontSize: '0.9rem',
     fontWeight: 500,
     '&::placeholder': {
-      color: 'rgba(255, 214, 165, 0.7)',
+      color: 'rgba(1, 166, 184, 0.7)',
       opacity: 1,
       fontWeight: 400,
     },
@@ -237,12 +237,12 @@ const QuickSearchShortcut = styled(Box)(({ theme }) => ({
   right: 12,
   top: '50%',
   transform: 'translateY(-50%)',
-  background: 'rgba(255, 214, 165, 0.15)',
-  border: '1px solid rgba(255, 214, 165, 0.3)',
+  background: 'rgba(1, 166, 184, 0.15)',
+  border: '1px solid rgba(1, 166, 184, 0.3)',
   borderRadius: 6,
   padding: '4px 8px',
   fontSize: '0.75rem',
-  color: 'rgba(255, 214, 165, 0.9)',
+  color: 'rgba(1, 166, 184, 0.9)',
   fontWeight: 600,
   letterSpacing: '0.5px',
   backdropFilter: 'blur(10px)',
@@ -250,27 +250,27 @@ const QuickSearchShortcut = styled(Box)(({ theme }) => ({
 }));
 
 // Enhanced Badge styles
-const ModernBadge = styled('span')(({ color = '#FFD6A5' }) => ({
+const ModernBadge = styled('span')(({ color = '#01A6B8' }) => ({
   fontSize: '0.625rem',
-  background: `linear-gradient(135deg, ${color}, #52796F)`,
-  color: '#2F3E46',
+  background: `linear-gradient(135deg, ${color}, #0CCC15)`,
+  color: '#FFFFFF',
   fontWeight: '700',
   padding: '3px 8px',
   borderRadius: '8px',
   marginLeft: '8px',
   textTransform: 'uppercase',
   letterSpacing: '0.5px',
-  boxShadow: '0 2px 8px rgba(255, 214, 165, 0.3)',
+  boxShadow: '0 2px 8px rgba(1, 166, 184, 0.3)',
   backdropFilter: 'blur(10px)',
 }));
 
 // Enhanced Circular icon button styling
 const EnhancedIconButton = styled(IconButton)(({ theme, variant = 'default' }) => ({
   backgroundColor: variant === 'primary' 
-    ? 'rgba(255, 214, 165, 0.15)' 
+    ? 'rgba(1, 166, 184, 0.15)' 
     : 'rgba(255, 255, 255, 0.08)',
-  border: '1px solid rgba(255, 214, 165, 0.2)',
-  color: '#FAF3E0',
+  border: '1px solid rgba(1, 166, 184, 0.2)',
+  color: '#FFFFFF',
   width: 44,
   height: 44,
   borderRadius: '12px',
@@ -280,11 +280,11 @@ const EnhancedIconButton = styled(IconButton)(({ theme, variant = 'default' }) =
   overflow: 'hidden',
   '&:hover': {
     backgroundColor: variant === 'primary' 
-      ? 'rgba(255, 214, 165, 0.25)' 
+      ? 'rgba(1, 166, 184, 0.25)' 
       : 'rgba(255, 255, 255, 0.15)',
-    border: '1px solid rgba(255, 214, 165, 0.4)',
+    border: '1px solid rgba(1, 166, 184, 0.4)',
     transform: 'translateY(-2px) scale(1.02)',
-    boxShadow: '0 8px 25px rgba(255, 214, 165, 0.3)',
+    boxShadow: '0 8px 25px rgba(1, 166, 184, 0.3)',
   },
   '&:active': {
     transform: 'translateY(-1px) scale(0.98)',
@@ -336,15 +336,23 @@ const TimeStatusChip = () => {
         label="--:--"
         size="small"
         sx={{
-          background: 'rgba(255, 214, 165, 0.12)',
-          color: '#FFD6A5',
-          border: '1px solid rgba(255, 214, 165, 0.3)',
+          background: 'rgba(1, 166, 184, 0.25)',
+          color: '#FFFFFF',
+          border: '1px solid rgba(1, 166, 184, 0.5)',
           fontWeight: 600,
           fontSize: '0.75rem',
           backdropFilter: 'blur(10px)',
+          boxShadow: '0 2px 8px rgba(1, 166, 184, 0.2)',
           '& .MuiChip-label': {
             px: 1.5,
           },
+          '&:hover': {
+            background: 'rgba(1, 166, 184, 0.35)',
+            border: '1px solid rgba(1, 166, 184, 0.6)',
+            transform: 'translateY(-1px)',
+            boxShadow: '0 4px 12px rgba(1, 166, 184, 0.3)',
+          },
+          transition: 'all 0.3s ease',
         }}
       />
     );
@@ -355,15 +363,23 @@ const TimeStatusChip = () => {
       label={currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
       size="small"
       sx={{
-        background: 'rgba(255, 214, 165, 0.12)',
-        color: '#FFD6A5',
-        border: '1px solid rgba(255, 214, 165, 0.3)',
+        background: 'rgba(1, 166, 184, 0.25)',
+        color: '#FFFFFF',
+        border: '1px solid rgba(1, 166, 184, 0.5)',
         fontWeight: 600,
         fontSize: '0.75rem',
         backdropFilter: 'blur(10px)',
+        boxShadow: '0 2px 8px rgba(1, 166, 184, 0.2)',
         '& .MuiChip-label': {
           px: 1.5,
         },
+        '&:hover': {
+          background: 'rgba(1, 166, 184, 0.35)',
+          border: '1px solid rgba(1, 166, 184, 0.6)',
+          transform: 'translateY(-1px)',
+          boxShadow: '0 4px 12px rgba(1, 166, 184, 0.3)',
+        },
+        transition: 'all 0.3s ease',
       }}
     />
   );
@@ -563,10 +579,10 @@ function HeaderSidebarContent({ children }) {
               height: '100vh',
               minHeight: '100dvh',
               width: drawerWidth,
-              background: 'linear-gradient(180deg, rgba(250, 243, 224, 0.98) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(250, 243, 224, 0.92) 100%)',
+              background: 'linear-gradient(180deg, rgba(27, 54, 93, 0.98) 0%, rgba(1, 166, 184, 0.95) 50%, rgba(12, 204, 21, 0.92) 100%)',
               backdropFilter: 'blur(25px)',
               zIndex: 1300,
-              boxShadow: '8px 0 32px rgba(47, 62, 70, 0.2), 0 0 0 1px rgba(255, 214, 165, 0.1)',
+              boxShadow: '8px 0 32px rgba(27, 54, 93, 0.2), 0 0 0 1px rgba(1, 166, 184, 0.1)',
               transform: sidebarOpen ? 'translateX(0)' : 'translateX(-100%)',
               transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
               overflowY: 'auto',
@@ -579,7 +595,7 @@ function HeaderSidebarContent({ children }) {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'linear-gradient(180deg, rgba(255, 214, 165, 0.03) 0%, rgba(82, 121, 111, 0.08) 100%)',
+                background: 'linear-gradient(180deg, rgba(1, 166, 184, 0.03) 0%, rgba(12, 204, 21, 0.08) 100%)',
                 pointerEvents: 'none',
               }
             }}
@@ -592,18 +608,18 @@ function HeaderSidebarContent({ children }) {
               justifyContent: 'space-between',
               position: 'relative',
               zIndex: 1,
-              background: 'linear-gradient(135deg, rgba(255, 214, 165, 0.08) 0%, rgba(82, 121, 111, 0.05) 100%)',
+              background: 'linear-gradient(135deg, rgba(1, 166, 184, 0.08) 0%, rgba(12, 204, 21, 0.05) 100%)',
               backdropFilter: 'blur(10px)',
-              borderBottom: '1px solid rgba(255, 214, 165, 0.15)',
+              borderBottom: '1px solid rgba(1, 166, 184, 0.15)',
             }}>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <img src="/images/intenso.png" alt="IntensoCore" style={{ width: '32px', height: '32px', marginRight: '12px' }} />
+                <img src="/images/xtend.png" alt="IntensoCore" style={{ width: '32px', height: '32px', marginRight: '12px' }} />
                 <Typography variant="subtitle1" sx={{ 
                   fontSize: '20px', 
                   fontWeight: 700, 
-                  color: '#2F3E46',
+                  color: '#FFFFFF',
                 }}>
-                  IntensoCore ERP
+                  Agent Support
                 </Typography>
               </Box>
               <IconButton
@@ -611,14 +627,14 @@ function HeaderSidebarContent({ children }) {
                 sx={{
                   p: 1.5,
                   borderRadius: '12px',
-                  background: 'rgba(255, 214, 165, 0.1)',
-                  border: '1px solid rgba(255, 214, 165, 0.2)',
-                  color: '#52796F',
+                  background: 'rgba(1, 166, 184, 0.1)',
+                  border: '1px solid rgba(1, 166, 184, 0.2)',
+                  color: '#FFFFFF',
                   transition: 'all 0.3s ease',
                   '&:hover': {
-                    background: 'rgba(255, 214, 165, 0.2)',
+                    background: 'rgba(1, 166, 184, 0.2)',
                     transform: 'translateY(-1px) scale(1.05)',
-                    boxShadow: '0 4px 15px rgba(255, 214, 165, 0.3)',
+                    boxShadow: '0 4px 15px rgba(1, 166, 184, 0.3)',
                   }
                 }}
               >
@@ -626,22 +642,22 @@ function HeaderSidebarContent({ children }) {
               </IconButton>
             </Box>
 
-            <Divider sx={{ mx: 2, borderColor: 'rgba(255, 214, 165, 0.2)', opacity: 0.7 }} />
+            <Divider sx={{ mx: 2, borderColor: 'rgba(1, 166, 184, 0.2)', opacity: 0.7 }} />
 
             {/* Menu Section */}
             <Box sx={{ px: 2, py: 2, position: 'relative', zIndex: 1 }}>
               <Typography sx={{
                 fontSize: '0.6875rem', 
                 fontWeight: 700, 
-                color: 'rgba(82, 121, 111, 0.8)',
+                color: 'rgba(1, 166, 184, 0.8)',
                 textTransform: 'uppercase', 
                 letterSpacing: '0.1rem', 
                 mb: 2,
                 px: 1.5,
                 py: 0.5,
-                background: 'rgba(255, 214, 165, 0.08)',
+                background: 'rgba(1, 166, 184, 0.08)',
                 borderRadius: 2,
-                border: '1px solid rgba(255, 214, 165, 0.15)',
+                border: '1px solid rgba(1, 166, 184, 0.15)',
               }}>
                 NAVIGATION
               </Typography>
@@ -667,24 +683,24 @@ function HeaderSidebarContent({ children }) {
                                 mx: 1,
                                 mb: 0.5,
                                 background: isActive 
-                                  ? 'rgba(255, 214, 165, 0.2)' 
+                                  ? 'rgba(1, 166, 184, 0.2)' 
                                   : 'transparent',
                                 backdropFilter: isActive ? 'blur(10px)' : 'none',
                                 border: isActive 
-                                  ? '1px solid rgba(255, 214, 165, 0.4)' 
+                                  ? '1px solid rgba(1, 166, 184, 0.4)' 
                                   : '1px solid transparent',
                                 transition: 'all 0.3s ease',
                                 '&:hover': {
-                                  background: 'rgba(255, 214, 165, 0.15)',
+                                  background: 'rgba(1, 166, 184, 0.15)',
                                   backdropFilter: 'blur(10px)',
-                                  border: '1px solid rgba(255, 214, 165, 0.3)',
+                                  border: '1px solid rgba(1, 166, 184, 0.3)',
                                   transform: 'translateX(4px)',
                                 }
                               }}
                             >
                               <ListItemIcon sx={{ 
                                 minWidth: 40, 
-                                color: isActive ? '#FFD6A5' : '#FAF3E0',
+                                color: isActive ? '#01A6B8' : '#FFFFFF',
                                 transition: 'all 0.3s ease'
                               }}>
                                 {item.icon}
@@ -695,7 +711,7 @@ function HeaderSidebarContent({ children }) {
                                     <Typography sx={{
                                       fontSize: '0.875rem',
                                       fontWeight: isActive ? 700 : 500,
-                                      color: isActive ? '#FFD6A5' : '#FAF3E0'
+                                      color: isActive ? '#01A6B8' : '#FFFFFF'
                                     }}>
                                       {item.text}
                                     </Typography>
@@ -707,8 +723,8 @@ function HeaderSidebarContent({ children }) {
                                 }
                               />
                               {openItems[item.id]
-                                ? <KeyboardArrowUp fontSize="small" sx={{ color: '#FFD6A5' }} />
-                                : <KeyboardArrowDown fontSize="small" sx={{ color: '#FAF3E0' }} />
+                                ? <KeyboardArrowUp fontSize="small" sx={{ color: '#01A6B8' }} />
+                                : <KeyboardArrowDown fontSize="small" sx={{ color: '#FFFFFF' }} />
                               }
                             </ListItemButton>
                           ) : (
@@ -722,24 +738,24 @@ function HeaderSidebarContent({ children }) {
                                 mx: 1,
                                 mb: 0.5,
                                 background: isActive 
-                                  ? 'rgba(255, 214, 165, 0.2)' 
+                                  ? 'rgba(1, 166, 184, 0.2)' 
                                   : 'transparent',
                                 backdropFilter: isActive ? 'blur(10px)' : 'none',
                                 border: isActive 
-                                  ? '1px solid rgba(255, 214, 165, 0.4)' 
+                                  ? '1px solid rgba(1, 166, 184, 0.4)' 
                                   : '1px solid transparent',
                                 transition: 'all 0.3s ease',
                                 '&:hover': {
-                                  background: 'rgba(255, 214, 165, 0.15)',
+                                  background: 'rgba(1, 166, 184, 0.15)',
                                   backdropFilter: 'blur(10px)',
-                                  border: '1px solid rgba(255, 214, 165, 0.3)',
+                                  border: '1px solid rgba(1, 166, 184, 0.3)',
                                   transform: 'translateX(4px)',
                                 }
                               }}
                             >
                               <ListItemIcon sx={{ 
                                 minWidth: 40, 
-                                color: isActive ? '#FFD6A5' : '#FAF3E0',
+                                color: isActive ? '#01A6B8' : '#FFFFFF',
                                 transition: 'all 0.3s ease'
                               }}>
                                 {item.icon}
@@ -750,7 +766,7 @@ function HeaderSidebarContent({ children }) {
                                     <Typography sx={{
                                       fontSize: '0.875rem',
                                       fontWeight: isActive ? 700 : 500,
-                                      color: isActive ? '#FFD6A5' : '#FAF3E0'
+                                      color: isActive ? '#01A6B8' : '#FFFFFF'
                                     }}>
                                       {item.text}
                                     </Typography>
@@ -799,24 +815,24 @@ function HeaderSidebarContent({ children }) {
                                           alignItems: 'center',
                                           justifyContent: 'flex-start',
                                           background: subItemIsActive 
-                                            ? 'rgba(255, 214, 165, 0.15)' 
+                                            ? 'rgba(1, 166, 184, 0.15)' 
                                             : 'transparent',
                                           backdropFilter: subItemIsActive ? 'blur(10px)' : 'none',
                                           border: subItemIsActive 
-                                            ? '1px solid rgba(255, 214, 165, 0.3)' 
+                                            ? '1px solid rgba(1, 166, 184, 0.3)' 
                                             : '1px solid transparent',
                                           transition: 'all 0.3s ease',
                                           '&:hover': {
-                                            background: 'rgba(255, 214, 165, 0.12)',
+                                            background: 'rgba(1, 166, 184, 0.12)',
                                             backdropFilter: 'blur(10px)',
-                                            border: '1px solid rgba(255, 214, 165, 0.2)',
+                                            border: '1px solid rgba(1, 166, 184, 0.2)',
                                             transform: 'translateX(2px)',
                                           }
                                         }}
                                       >
                                         <ListItemIcon sx={{
                                           minWidth: 36,
-                                          color: subItemIsActive ? '#FFD6A5' : 'rgba(250, 243, 224, 0.8)'
+                                          color: subItemIsActive ? '#01A6B8' : 'rgba(255, 255, 255, 0.8)'
                                         }}>
                                           {subItem.icon}
                                         </ListItemIcon>
@@ -826,12 +842,12 @@ function HeaderSidebarContent({ children }) {
                                               <Typography sx={{
                                                 fontSize: '0.875rem',
                                                 fontWeight: subItemIsActive ? 600 : 500,
-                                                color: subItemIsActive ? '#FFD6A5' : 'rgba(250, 243, 224, 0.8)'
+                                                color: subItemIsActive ? '#01A6B8' : 'rgba(255, 255, 255, 0.8)'
                                               }}>
                                                 {subItem.text}
                                               </Typography>
                                               {subItem.badge && (
-                                                <ModernBadge color={subItem.badge.color || '#FFD6A5'}>
+                                                <ModernBadge color={subItem.badge.color || '#01A6B8'}>
                                                   {typeof subItem.badge === 'string' ? subItem.badge : subItem.badge.text}
                                                 </ModernBadge>
                                               )}
@@ -853,19 +869,19 @@ function HeaderSidebarContent({ children }) {
 
             {/* Support Section */}
             <Box sx={{ mt: 'auto', px: 2, pb: 3, position: 'relative', zIndex: 1 }}>
-              <Divider sx={{ mx: 1, mb: 2, borderColor: 'rgba(255, 214, 165, 0.3)', opacity: 0.8 }} />
+              <Divider sx={{ mx: 1, mb: 2, borderColor: 'rgba(255, 255, 255, 0.15)', opacity: 0.8 }} />
               <Typography sx={{
                 fontSize: '0.6875rem', 
                 fontWeight: 700, 
-                color: 'rgba(255, 214, 165, 0.9)',
+                color: 'rgba(255, 255, 255, 0.9)',
                 textTransform: 'uppercase', 
                 letterSpacing: '0.1rem', 
                 mb: 1.5,
                 px: 1.5,
                 py: 0.5,
-                background: 'rgba(255, 214, 165, 0.12)',
+                background: 'rgba(255, 255, 255, 0.08)',
                 borderRadius: 2,
-                border: '1px solid rgba(255, 214, 165, 0.25)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
                 textAlign: 'center',
               }}>
                 SUPPORT
@@ -875,20 +891,20 @@ function HeaderSidebarContent({ children }) {
                 px: 2,
                 py: 1.5,
                 borderRadius: 2,
-                background: 'rgba(255, 214, 165, 0.08)',
-                border: '1px solid rgba(255, 214, 165, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 '&:hover': {
-                  background: 'rgba(255, 214, 165, 0.15)',
-                  border: '1px solid rgba(255, 214, 165, 0.35)',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
                   transform: 'translateY(-1px)',
-                  boxShadow: '0 4px 12px rgba(255, 214, 165, 0.2)',
+                  boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
                 }
               }}>
                 <Typography sx={{ 
                   fontSize: '0.75rem', 
-                  color: 'rgba(255, 214, 165, 0.95)',
+                  color: 'rgba(255, 255, 255, 0.95)',
                   fontWeight: 600,
                   mb: 0.5,
                 }}>
@@ -896,7 +912,7 @@ function HeaderSidebarContent({ children }) {
                 </Typography>
                 <Typography sx={{ 
                   fontSize: '0.7rem', 
-                  color: 'rgba(255, 214, 165, 0.8)',
+                  color: 'rgba(255, 255, 255, 0.7)',
                   fontWeight: 400,
                 }}>
                   Contact support
@@ -931,37 +947,37 @@ function HeaderSidebarContent({ children }) {
             alignItems: 'center',
             position: 'relative',
             zIndex: 1,
-            background: 'linear-gradient(135deg, rgba(255, 214, 165, 0.08) 0%, rgba(82, 121, 111, 0.05) 100%)',
+            background: 'linear-gradient(135deg, rgba(1, 166, 184, 0.08) 0%, rgba(12, 204, 21, 0.05) 100%)',
             backdropFilter: 'blur(10px)',
-            borderBottom: '1px solid rgba(255, 214, 165, 0.15)',
+            borderBottom: '1px solid rgba(1, 166, 184, 0.15)',
           }}>
-            <img src="/images/intenso.png" alt="IntensoCore" style={{ width: '50px', height: '50px', marginRight: '16px' }} />
+            <img src="/images/xtend.png" alt="IntensoCore" style={{ width: '50px', height: '50px', marginRight: '16px' }} />
             <Typography variant="subtitle1" sx={{ 
               fontSize: '22px', 
               fontWeight: 700, 
-              color: '#FAF3E0',
-              textShadow: '0 2px 4px rgba(255, 214, 165, 0.4)',
+              color: '#FFFFFF',
+              textShadow: '0 2px 4px rgba(1, 166, 184, 0.4)',
             }}>
-              IntensoCore ERP
+              Agent Support
             </Typography>
           </Box>
 
-          <Divider sx={{ mx: 2, borderColor: 'rgba(255, 214, 165, 0.25)', opacity: 0.8 }} />
+          <Divider sx={{ mx: 2, borderColor: 'rgba(1, 166, 184, 0.25)', opacity: 0.8 }} />
 
           {/* Menu Section */}
           <Box sx={{ px: 2, py: 2, position: 'relative', zIndex: 1 }}>
             <Typography sx={{
               fontSize: '0.6875rem', 
               fontWeight: 700, 
-              color: 'rgba(82, 121, 111, 0.8)',
+              color: 'rgba(1, 166, 184, 0.8)',
               textTransform: 'uppercase', 
               letterSpacing: '0.1rem', 
               mb: 2,
               px: 1.5,
               py: 0.5,
-              background: 'rgba(255, 214, 165, 0.08)',
+              background: 'rgba(1, 166, 184, 0.08)',
               borderRadius: 2,
-              border: '1px solid rgba(255, 214, 165, 0.15)',
+              border: '1px solid rgba(1, 166, 184, 0.15)',
             }}>
               NAVIGATION
             </Typography>
@@ -987,24 +1003,24 @@ function HeaderSidebarContent({ children }) {
                               mx: 1,
                               mb: 0.5,
                               background: isActive 
-                                ? 'rgba(255, 214, 165, 0.2)' 
+                                ? 'rgba(1, 166, 184, 0.2)' 
                                 : 'transparent',
                               backdropFilter: isActive ? 'blur(10px)' : 'none',
                               border: isActive 
-                                ? '1px solid rgba(255, 214, 165, 0.4)' 
+                                ? '1px solid rgba(1, 166, 184, 0.4)' 
                                 : '1px solid transparent',
                               transition: 'all 0.3s ease',
                               '&:hover': {
-                                background: 'rgba(255, 214, 165, 0.15)',
+                                background: 'rgba(1, 166, 184, 0.15)',
                                 backdropFilter: 'blur(10px)',
-                                border: '1px solid rgba(255, 214, 165, 0.3)',
+                                border: '1px solid rgba(1, 166, 184, 0.3)',
                                 transform: 'translateX(4px)',
                               }
                             }}
                           >
                             <ListItemIcon sx={{ 
                               minWidth: 40, 
-                              color: isActive ? '#FFD6A5' : '#FAF3E0',
+                              color: isActive ? '#01A6B8' : '#FFFFFF',
                               transition: 'all 0.3s ease'
                             }}>
                               {item.icon}
@@ -1015,7 +1031,7 @@ function HeaderSidebarContent({ children }) {
                                   <Typography sx={{
                                     fontSize: '0.875rem',
                                     fontWeight: isActive ? 700 : 500,
-                                    color: isActive ? '#FFD6A5' : '#FAF3E0'
+                                    color: isActive ? '#01A6B8' : '#FFFFFF'
                                   }}>
                                     {item.text}
                                   </Typography>
@@ -1027,8 +1043,8 @@ function HeaderSidebarContent({ children }) {
                               }
                             />
                             {openItems[item.id]
-                              ? <KeyboardArrowUp fontSize="small" sx={{ color: '#FFD6A5' }} />
-                              : <KeyboardArrowDown fontSize="small" sx={{ color: '#FAF3E0' }} />
+                              ? <KeyboardArrowUp fontSize="small" sx={{ color: '#01A6B8' }} />
+                              : <KeyboardArrowDown fontSize="small" sx={{ color: '#FFFFFF' }} />
                             }
                           </ListItemButton>
                         ) : (
@@ -1042,24 +1058,24 @@ function HeaderSidebarContent({ children }) {
                               mx: 1,
                               mb: 0.5,
                               background: isActive 
-                                ? 'rgba(255, 214, 165, 0.2)' 
+                                ? 'rgba(1, 166, 184, 0.2)' 
                                 : 'transparent',
                               backdropFilter: isActive ? 'blur(10px)' : 'none',
                               border: isActive 
-                                ? '1px solid rgba(255, 214, 165, 0.4)' 
+                                ? '1px solid rgba(1, 166, 184, 0.4)' 
                                 : '1px solid transparent',
                               transition: 'all 0.3s ease',
                               '&:hover': {
-                                background: 'rgba(255, 214, 165, 0.15)',
+                                background: 'rgba(1, 166, 184, 0.15)',
                                 backdropFilter: 'blur(10px)',
-                                border: '1px solid rgba(255, 214, 165, 0.3)',
+                                border: '1px solid rgba(1, 166, 184, 0.3)',
                                 transform: 'translateX(4px)',
                               }
                             }}
                           >
                             <ListItemIcon sx={{ 
                               minWidth: 40, 
-                              color: isActive ? '#FFD6A5' : '#FAF3E0',
+                              color: isActive ? '#01A6B8' : '#FFFFFF',
                               transition: 'all 0.3s ease'
                             }}>
                               {item.icon}
@@ -1070,7 +1086,7 @@ function HeaderSidebarContent({ children }) {
                                   <Typography sx={{
                                     fontSize: '0.875rem',
                                     fontWeight: isActive ? 700 : 500,
-                                    color: isActive ? '#FFD6A5' : '#FAF3E0'
+                                    color: isActive ? '#01A6B8' : '#FFFFFF'
                                   }}>
                                     {item.text}
                                   </Typography>
@@ -1119,24 +1135,24 @@ function HeaderSidebarContent({ children }) {
                                         alignItems: 'center',
                                         justifyContent: 'flex-start',
                                         background: subItemIsActive 
-                                          ? 'rgba(255, 214, 165, 0.15)' 
+                                          ? 'rgba(1, 166, 184, 0.15)' 
                                           : 'transparent',
                                         backdropFilter: subItemIsActive ? 'blur(10px)' : 'none',
                                         border: subItemIsActive 
-                                          ? '1px solid rgba(255, 214, 165, 0.3)' 
+                                          ? '1px solid rgba(1, 166, 184, 0.3)' 
                                           : '1px solid transparent',
                                         transition: 'all 0.3s ease',
                                         '&:hover': {
-                                          background: 'rgba(255, 214, 165, 0.12)',
+                                          background: 'rgba(1, 166, 184, 0.12)',
                                           backdropFilter: 'blur(10px)',
-                                          border: '1px solid rgba(255, 214, 165, 0.2)',
+                                          border: '1px solid rgba(1, 166, 184, 0.2)',
                                           transform: 'translateX(2px)',
                                         }
                                       }}
                                     >
                                       <ListItemIcon sx={{
                                         minWidth: 36,
-                                        color: subItemIsActive ? '#FFD6A5' : 'rgba(250, 243, 224, 0.8)'
+                                        color: subItemIsActive ? '#01A6B8' : 'rgba(255, 255, 255, 0.8)'
                                       }}>
                                         {subItem.icon}
                                       </ListItemIcon>
@@ -1146,12 +1162,12 @@ function HeaderSidebarContent({ children }) {
                                             <Typography sx={{
                                               fontSize: '0.875rem',
                                               fontWeight: subItemIsActive ? 600 : 500,
-                                              color: subItemIsActive ? '#FFD6A5' : 'rgba(250, 243, 224, 0.8)'
+                                              color: subItemIsActive ? '#01A6B8' : 'rgba(255, 255, 255, 0.8)'
                                             }}>
                                               {subItem.text}
                                             </Typography>
                                             {subItem.badge && (
-                                              <ModernBadge color={subItem.badge.color || '#FFD6A5'}>
+                                              <ModernBadge color={subItem.badge.color || '#01A6B8'}>
                                                 {typeof subItem.badge === 'string' ? subItem.badge : subItem.badge.text}
                                               </ModernBadge>
                                             )}
@@ -1173,19 +1189,19 @@ function HeaderSidebarContent({ children }) {
 
           {/* Support Section */}
           <Box sx={{ mt: 'auto', px: 2, pb: 3, position: 'relative', zIndex: 1 }}>
-            <Divider sx={{ mx: 1, mb: 2, borderColor: 'rgba(255, 214, 165, 0.3)', opacity: 0.8 }} />
+            <Divider sx={{ mx: 1, mb: 2, borderColor: 'rgba(255, 255, 255, 0.15)', opacity: 0.8 }} />
             <Typography sx={{
               fontSize: '0.6875rem', 
               fontWeight: 700, 
-              color: 'rgba(255, 214, 165, 0.9)',
+              color: 'rgba(255, 255, 255, 0.9)',
               textTransform: 'uppercase', 
               letterSpacing: '0.1rem', 
               mb: 1.5,
               px: 1.5,
               py: 0.5,
-              background: 'rgba(255, 214, 165, 0.12)',
+              background: 'rgba(255, 255, 255, 0.08)',
               borderRadius: 2,
-              border: '1px solid rgba(255, 214, 165, 0.25)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               textAlign: 'center',
             }}>
               SUPPORT
@@ -1195,20 +1211,20 @@ function HeaderSidebarContent({ children }) {
               px: 2,
               py: 1.5,
               borderRadius: 2,
-              background: 'rgba(255, 214, 165, 0.08)',
-              border: '1px solid rgba(255, 214, 165, 0.2)',
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
               '&:hover': {
-                background: 'rgba(255, 214, 165, 0.15)',
-                border: '1px solid rgba(255, 214, 165, 0.35)',
+                background: 'rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.15)',
                 transform: 'translateY(-1px)',
-                boxShadow: '0 4px 12px rgba(255, 214, 165, 0.2)',
+                boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
               }
             }}>
               <Typography sx={{ 
                 fontSize: '0.75rem', 
-                color: 'rgba(255, 214, 165, 0.95)',
+                color: 'rgba(255, 255, 255, 0.95)',
                 fontWeight: 600,
                 mb: 0.5,
               }}>
@@ -1216,7 +1232,7 @@ function HeaderSidebarContent({ children }) {
               </Typography>
               <Typography sx={{ 
                 fontSize: '0.7rem', 
-                color: 'rgba(255, 214, 165, 0.8)',
+                color: 'rgba(255, 255, 255, 0.7)',
                 fontWeight: 400,
               }}>
                 Contact support
@@ -1302,7 +1318,7 @@ function HeaderSidebarContent({ children }) {
                     boxShadow: '0 4px 15px rgba(255, 214, 165, 0.4)',
                   },
                   '& .user-name': {
-                    color: '#FFD6A5',
+                    color: '#01A6B8',
                   },
                   '& .dropdown-arrow': {
                     transform: 'translateX(2px)',
@@ -1316,9 +1332,9 @@ function HeaderSidebarContent({ children }) {
                 sx={{ 
                   width: 40, 
                   height: 40, 
-                  border: '2px solid rgba(255, 214, 165, 0.5)',
-                  background: 'linear-gradient(135deg, #52796F, #2F3E46)',
-                  color: '#FAF3E0',
+                  border: '2px solid rgba(1, 166, 184, 0.5)',
+                  background: 'linear-gradient(135deg, #01A6B8, #1B365D)',
+                  color: '#FFFFFF',
                   fontWeight: 700,
                   fontSize: '1.1rem',
                   transition: 'all 0.3s ease',
@@ -1332,7 +1348,7 @@ function HeaderSidebarContent({ children }) {
                   sx={{ 
                     fontSize: '0.9rem', 
                     fontWeight: 600, 
-                    color: '#FAF3E0',
+                    color: '#FFFFFF',
                     lineHeight: 1.2,
                     transition: 'color 0.3s ease',
                   }}
@@ -1342,7 +1358,7 @@ function HeaderSidebarContent({ children }) {
                 <Typography sx={{ 
                   fontSize: '0.75rem', 
                   fontWeight: 400, 
-                  color: 'rgba(255, 214, 165, 0.7)',
+                  color: 'rgba(255, 255, 255, 0.7)',
                   textTransform: 'capitalize',
                 }}>
                   {user?.roles?.[0] || 'User'}
@@ -1352,7 +1368,7 @@ function HeaderSidebarContent({ children }) {
                 className="dropdown-arrow"
                 fontSize="small" 
                 sx={{ 
-                  color: 'rgba(255, 214, 165, 0.8)', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   fontSize: '1.4rem', 
                   ml: 1,
                   transition: 'all 0.3s ease',
@@ -1371,10 +1387,10 @@ function HeaderSidebarContent({ children }) {
               elevation: 0,
               sx: {
                 overflow: 'visible',
-                background: 'linear-gradient(135deg, rgba(250, 243, 224, 0.95) 0%, rgba(255, 214, 165, 0.9) 100%)',
+                background: 'linear-gradient(135deg, rgba(27, 54, 93, 0.95) 0%, rgba(1, 166, 184, 0.9) 100%)',
                 backdropFilter: 'blur(25px)',
-                border: '1px solid rgba(255, 214, 165, 0.3)',
-                boxShadow: '0 20px 40px rgba(47, 62, 70, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(1, 166, 184, 0.3)',
+                boxShadow: '0 20px 40px rgba(27, 54, 93, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05)',
                 mt: 1.5,
                 borderRadius: 4,
                 minWidth: 220,
@@ -1386,9 +1402,9 @@ function HeaderSidebarContent({ children }) {
                   right: 22,
                   width: 12,
                   height: 12,
-                  bgcolor: 'rgba(250, 243, 224, 0.95)',
+                  bgcolor: 'rgba(27, 54, 93, 0.95)',
                   transform: 'translateY(-50%) rotate(45deg)',
-                  border: '1px solid rgba(255, 214, 165, 0.3)',
+                  border: '1px solid rgba(1, 166, 184, 0.3)',
                   borderBottom: 'none',
                   borderRight: 'none',
                 },
@@ -1400,10 +1416,10 @@ function HeaderSidebarContent({ children }) {
                   my: 0.5,
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   '&:hover': {
-                    background: 'linear-gradient(135deg, rgba(255, 214, 165, 0.25) 0%, rgba(82, 121, 111, 0.15) 100%)',
+                    background: 'linear-gradient(135deg, rgba(1, 166, 184, 0.25) 0%, rgba(12, 204, 21, 0.15) 100%)',
                     backdropFilter: 'blur(15px)',
                     transform: 'translateX(4px) scale(1.02)',
-                    boxShadow: '0 4px 15px rgba(255, 214, 165, 0.2)',
+                    boxShadow: '0 4px 15px rgba(1, 166, 184, 0.2)',
                   }
                 },
               },
@@ -1419,13 +1435,13 @@ function HeaderSidebarContent({ children }) {
           >
             <MenuItem onClick={handleAccountSettings}>
               <ListItemIcon>
-                <Settings fontSize="small" sx={{ color: '#52796F' }} />
+                <Settings fontSize="small" sx={{ color: '#FFFFFF' }} />
               </ListItemIcon>
               <ListItemText
                 primary={
                   <Typography sx={{ 
                     fontSize: '0.9rem', 
-                    color: '#2F3E46',
+                    color: '#FFFFFF',
                     fontWeight: 500
                   }}>
                     Account Settings
@@ -1433,16 +1449,16 @@ function HeaderSidebarContent({ children }) {
                 }
               />
             </MenuItem>
-            <Divider sx={{ mx: 1.5, my: 0.5, borderColor: 'rgba(255, 214, 165, 0.3)' }} />
+            <Divider sx={{ mx: 1.5, my: 0.5, borderColor: 'rgba(255, 255, 255, 0.3)' }} />
             <MenuItem onClick={handleLogout}>
               <ListItemIcon>
-                <ExitToApp fontSize="small" sx={{ color: '#52796F' }} />
+                <ExitToApp fontSize="small" sx={{ color: '#FFFFFF' }} />
               </ListItemIcon>
               <ListItemText
                 primary={
                   <Typography sx={{ 
                     fontSize: '0.9rem', 
-                    color: '#2F3E46',
+                    color: '#FFFFFF',
                     fontWeight: 500
                   }}>
                     Sign Out
