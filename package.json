@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preinstall": "node ./ensure-yarn.js",
+    "prestart": "node ./ensure-yarn.js",
+    "prebuild": "node ./ensure-yarn.js",
+    "predev": "node ./ensure-yarn.js"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
